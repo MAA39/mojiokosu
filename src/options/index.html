@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mojiokosu 設定</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <header>
+      <h1>Mojiokosu 設定</h1>
+      <p>音声文字起こし拡張の詳細設定</p>
+    </header>
+    
+    <section class="settings-section">
+      <h2>基本設定</h2>
+      
+      <div class="setting-item">
+        <label for="language">認識言語</label>
+        <select id="language">
+          <option value="ja-JP">日本語</option>
+          <option value="en-US">English (US)</option>
+          <option value="en-GB">English (UK)</option>
+        </select>
+      </div>
+      
+      <div class="setting-item">
+        <label for="silence-threshold">無音検出（秒）</label>
+        <input type="number" id="silence-threshold" value="2.0" min="0.5" max="10.0" step="0.5">
+      </div>
+      
+      <div class="setting-item">
+        <label for="max-chars">最大文字数</label>
+        <input type="number" id="max-chars" value="120" min="50" max="500" step="10">
+      </div>
+    </section>
+    
+    <section class="settings-section">
+      <h2>表示設定</h2>
+      
+      <div class="setting-item">
+        <label>
+          <input type="checkbox" id="show-privacy-banner" checked>
+          プライバシーバナーを表示
+        </label>
+      </div>
+      
+      <div class="setting-item">
+        <label>
+          <input type="checkbox" id="dictation-box-default">
+          Dictation Boxを既定で有効
+        </label>
+      </div>
+    </section>
+    
+    <footer>
+      <button id="save-settings">設定を保存</button>
+      <button id="reset-settings">デフォルトに戻す</button>
+    </footer>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>
